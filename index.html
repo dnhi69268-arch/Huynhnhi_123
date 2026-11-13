@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thế Giới Ăn Vặt Việt Nam</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff8ed;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(120deg, #ff7518, #ffb347);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    animation: fadeDown 1s;
+}
+
+header h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+/* MENU */
+nav {
+    background: #ffad42;
+    text-align: center;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 12px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #a83d00;
+}
+
+/* BANNER */
+.banner {
+    background: linear-gradient(135deg, #ffe5b4, #fff0d5);
+    text-align: center;
+    padding: 45px 15px;
+    animation: fadeUp 1s;
+}
+
+.banner h2 {
+    color: #e65c00;
+    font-size: 28px;
+}
+
+/* DANH SÁCH MÓN ĂN */
+.container {
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.container h2 {
+    color: #e65c00;
+    margin-bottom: 30px;
+}
+
+.food-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.food {
+    width: 230px;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px #e5d6c5;
+    overflow: hidden;
+    transition: 0.4s;
+    animation: fadeUp 0.8s both;
+}
+
+.food:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px #e6b47e;
+}
+
+.food img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+.food:hover img {
+    transform: scale(1.08);
+}
+
+.food h3 {
+    color: #e65c00;
+}
+
+.food p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.price {
+    color: red !important;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* GIỚI THIỆU */
+.about {
+    background: linear-gradient(120deg, #ffe5b4, #fff0d5);
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.about h2 {
+    color: #d94b00;
+}
+
+.about p {
+    line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(120deg, #ff7518, #ff9c36);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ĐIỆN THOẠI */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    .food {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🍟 THẾ GIỚI ĂN VẶT VIỆT NAM 🍡</h1>
+    <p>Khám phá hương vị ẩm thực đường phố Việt Nam</p>
+</header>
+
+<nav>
+    <a href="#home">Trang chủ</a>
+    <a href="#menu">Món ăn</a>
+    <a href="#about">Giới thiệu</a>
+</nav>
+
+<section class="banner" id="home">
+    <h2>Chào mừng đến với thế giới ăn vặt!</h2>
+    <p>
+        Nơi hội tụ những món ăn vặt thơm ngon,
+        hấp dẫn và quen thuộc của Việt Nam.
+    </p>
+    <p>Ăn ngon - Giá tốt - Hương vị tuyệt vời!</p>
+</section>
+
+<section class="container" id="menu">
+
+    <h2>🍜 DANH SÁCH MÓN ĂN VẶT 🍜</h2>
+
+    <div class="food-list">
+
+        <div class="food">
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Mixed_rice_paper.jpg"
+            alt="Bánh tráng trộn">
+            <h3>Bánh tráng trộn</h3>
+            <p>Chua cay, đậm vị, thơm ngon.</p>
+            <p class="price">25.000 VNĐ</p>
+        </div>
+
+        <div class="food">
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/A_Fried_Fish_balls_and_xian_jie_sauce.jpg"
+            alt="Cá viên chiên">
+            <h3>Cá viên chiên</h3>
+            <p>Giòn ngon, nóng hổi, hấp dẫn.</p>
+            <p class="price">20.000 VNĐ</p>
+        </div>
+
+        <div class="food">
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/French_Fries.jpg"
+            alt="Khoai tây chiên">
+            <h3>Khoai tây chiên</h3>
+            <p>Vàng giòn, thơm ngon.</p>
+            <p class="price">25.000 VNĐ</p>
+        </div>
+
+        <div class="food">
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A1nh_tr%C3%A1ng_n%C6%B0%E1%BB%9Bng_TP._H%E1%BB%93_Ch%C3%AD_Minh_-_street_food_in_Ho_Chi_Minh_City,_Vietnam.jpg"
+            alt="Bánh tráng nướng">
+            <h3>Bánh tráng nướng</h3>
+            <p>Béo thơm, nóng giòn, đậm đà.</p>
+            <p class="price">15.000 VNĐ</p>
+        </div>
+
+        <div class="food">
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/G%E1%BB%8Fi_cu%E1%BB%91n.jpg"
+            alt="Gỏi cuốn">
+            <h3>Gỏi cuốn</h3>
+            <p>Tươi ngon, thanh mát.</p>
+            <p class="price">20.000 VNĐ</p>
+        </div>
+
+        <div class="food">
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Vietnamese_puddings_with_coconut_milk.jpg"
+            alt="Chè Việt Nam">
+            <h3>Chè Thái</h3>
+            <p>Ngọt mát, béo thơm, nhiều topping.</p>
+            <p class="price">20.000 VNĐ</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>❤️ GIỚI THIỆU ❤️</h2>
+
+    <p>
+        Thế Giới Ăn Vặt Việt Nam là website
+        giới thiệu các món ăn vặt nổi tiếng
+        và đặc sắc của Việt Nam.
+    </p>
+
+    <p>
+        Chúng tôi mong muốn mang đến cho mọi người
+        những thông tin thú vị về văn hóa ẩm thực
+        đường phố Việt Nam.
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 - THẾ GIỚI ĂN VẶT VIỆT NAM</p>
+    <p>Ẩm thực Việt Nam - Hương vị khó quên!</p>
+</footer>
+
+</body>
+</html>
